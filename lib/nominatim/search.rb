@@ -90,6 +90,16 @@ module Nominatim
       @criteria[:addressdetails] = bool ? 1 : 0
       self
     end
+    
+    # Include a list of alternative names in the results.
+    # These may include language variants, references, operator and brand.
+    #
+    # @param bool [true, false]
+    # @return [Nominatim::Search]
+    def name_details(bool)
+      @criteria[:namedetails] = bool ? 1 : 0
+      self
+    end
 
     # Exclude given place ids from the search result.
     #
