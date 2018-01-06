@@ -83,6 +83,14 @@ module Nominatim
     def osm_type
       @osm_type ||= @attrs[:osm_type]
     end
+      
+    # Return a name details
+    #
+    # @return [String]
+    def namedetails
+      @namedetails ||= @attrs[:namedetails] if @attrs[:namedetails]
+    end
+    alias name_details namedetails
 
     private
 
